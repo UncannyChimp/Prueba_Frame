@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/37ebc43405.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <title>Frame_Robotics</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header borde barra fixed-top barra-expandida barra-light" id="home">
+            <div class="container">
+                <a href="" class="barra-brand">FRAME Robotics</a>
+                <span></span>
+            </div>
+            <div class="collapse barra-collapse">
+                <ul class="barra-nav">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link-1">
+                            HOME
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#lenguajes" class="nav-link">
+                            HELPs
+                        </a>
+                    </li>
+                    <li class="nav-item2">
+                        <button class="power" id="BtnParo">
+                            <span class="fa-solid fa-power-off"></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="velocidad">
+            <select id="selvel" onchange="changevel();">
+                <option selected class="selected">Speed</option>
+                <option value="v1">Vel1</option>
+                <option value="v2">Vel2</option>
+                <option value="v3">Vel3</option>
+                <option value="v4">Vel4</option>
+            </select>
+        </div>
+        <div class="mensaje">
+            <h2 id="miH2">Conectando</h2>
+        </div>
+        <div class="bateria">
+            <div class="energy">
+            <i class="energgy fa-solid fa-bolt"></i>
+            </div>
+        </div>
+        <main class="camara">
+            <div class="contenedorcam">
+                <img src="http://192.168.0.144:81/stream" alt="" class="video">
+            </div>
+        </main>
+        <div class="boton-up" id="adelante">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+        <div class="boton-do" id="atras">
+            <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
+        </div>
+        <div class="fondo">
+        </div>
+        <div class="boton-iz" id="izquierda">
+            <i class="fa-solid fa-chevron-up fa-rotate-270"></i>
+        </div>
+        <div class="boton-de" id="derecha">
+            <i class="fa-solid fa-chevron-up fa-rotate-90"></i>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
